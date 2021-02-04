@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <meta property="og:title" content="Campus Coronavirus Response">
+    <meta property="og:description" content="Tufts MGGG Redistricting Lab: Colleges can provide much-needed support for strained hospitals">
+    <meta property="og:image" content="https://mggg.github.io/covid-flows/mapscreen.png">
+    <meta property="og:image:width" content="782">
+    <meta property="og:image:height" content="450">
+    <meta property="og:url" content="https://mggg.github.io/covid-flows/">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@gerrymandr">
+    <meta name="twitter:title" content="Campus Coronavirus Response">
+    <meta name="twitter:description" content="Tufts MGGG Redistricting Lab: Colleges can provide much-needed support for strained hospitals">
+    <meta name="twitter:image" content="https://mggg.github.io/covid-flows/mapscreen.png">
+    <meta name="twitter:creator" content="@gerrymandr" />
+
+    <title>Modeling University Coronavirus Response | MGGG</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <script src="//api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js"></script>
+    <link href="//api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.css" type="text/css"/>
+    <link rel="stylesheet" href="./homemap.css?v=10">
+    <script src="https://kit.fontawesome.com/e1aaa2504d.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Campus Coronavirus Data</h1>
+      <h2>A tool for planning COVID-19 testing and vaccine distribution</h2>
+    </div>
+    <div class="container">
+      <p class="desc">This is a mapping tool intended to help higher-education institutions in Massachusetts understand the status of 
+        vaccine rollout across the state. In the map below, each blue dot corresponds to a college or university, sized according to 
+       the number of enrolled students. Hovering over a dot will display relevant information about the institution: MCVP status,
+       partnerships with nearby medical centers, status as a vaccination site, and more. Currently, we can only display AICUM 
+       institutions, but we will expand the map as more data becomes available.
+      </p>
+      
+      <br/>
+
+      <h3>Mapping the vaccine rollout of AICUM colleges and universities</h3>
+      <!-- <h4>Number of hospital and dorm beds</h4> -->
+
+      <div class="box">
+        <li class="legend italic">
+          <span class="circle"></span>
+          <span>size is proportional to enrollment</span>
+        </li>
+        <li class="legend">
+          <span class="circle blue"></span>
+          <span>Colleges</span>
+        </li>
+        <li class="legend">
+          <span>&nbsp;&nbsp;</span>
+          <!--<select id="travel_lines" onchange="toggleLines(event)" class="util" />
+            <option value="20">20% dorm capacity cap</option>
+            <option value="40" selected>40% dorm capacity cap</option>
+            <option value="60">60% dorm capacity cap</option>
+            <option value="80">80% dorm capacity cap</option>
+            <option value="0">No connections</option>
+          </select>-->
+        </li>
+      </div>
+      <div id="ma_map" class="map">
+        <div class="no-script">
+          Loading map...
+          JavaScript must be enabled
+        </div>
+      </div>
+      <div>
+        <br/>
+        <h3>Data sources</h3>
+        <p class="desc">Our enrollment and institutional data comes from <a href="https://docs.digital.mass.gov/dataset/massgis-data-colleges-and-universities">MassGIS</a> 
+          and the <a href="https://nces.ed.gov/ipeds/use-the-data">Integrated Postsecondary Education Data System</a> (IPEDS).
+          Our vaccine-related data is sourced from the Jan. 19, 2021 survey of <a href="https://aicum.org/">AICUM</a> colleges.
+        </p>
+        <h3>About us</h3>
+        <p class="desc">
+          <a href="https://mggg.org">MGGG Redistricting Lab</a> is a research team of the <a href="https://tischcollege.tufts.edu">Tisch College of Civic Life</a> at <a href="https://tufts.edu">Tufts University</a>. We are grateful for the major support of the National Science Foundation 
+          through the Convergence Accelerator award OIA-1937095, Network Science of Census Data.
+        </p>
+        <p class="desc">
+          This project is a team effort of the MGGG Redistricting Lab with critical collaboration from <a href="https://pjrule.me">Parker Rule</a> and <a href="https://github.com/gabeschoenbach">Gabe Schoenbach</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Fetch polyfill for old old browsers -->
+    <script src="./fetch.umd.js"></script>
+    <script src="//code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="//api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <script src="./mapboxed.js?v=9"></script>
+  </body>
+</html>

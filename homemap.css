@@ -1,0 +1,302 @@
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+body {
+  font-family: "Lora", Georgia, serif; //"Source Sans Pro", sans-serif;
+  text-align: center;
+  font-size: 120%;
+  line-height: 150%;
+}
+.header {
+  background: #006b9c;
+  width: 100%;
+  color: #fff;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+h1 {
+  font-size: 240%;
+  //line-height: 50%;
+}
+h2, h4 {
+  font-weight: normal;
+}
+h3 {
+  //line-height: 0%;
+  margin-bottom: 10px;
+}
+p, ul, h1, h2 {
+  width: 70%;
+  margin-left: 15%;
+}
+td:first-child {
+  text-align: left;
+}
+
+@media (max-width: 1000px) {
+   p, ul, h2, h3 {
+     width: 80%;
+     margin-left: 10%;
+   }
+   h1 {
+     font-size: 200%;
+     line-height: 100%;
+   }
+   .map, .box, .table-container {
+     width: 90%;
+     margin: 0;
+   }
+ }
+.map {
+  border: 1px solid #ccc;
+  height: 650px;
+  max-height: 80vh;
+  width: 70%;
+  /* width: calc(80% - 60px); */
+  margin-left: 15%;
+  /* margin-right: 10px; */
+}
+.box {
+  border: 1px solid #ccc;
+  border-bottom: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 70%;
+  margin-left: 15%;
+  /* width: 100%;
+  width: calc(100% - 80px); */
+  /* margin-left: 10px;
+  margin-right: 10px; */
+}
+p, li, td {
+  text-align: left;
+}
+.circle {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+}
+li.legend {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 15px;
+}
+li.legend span {
+  vertical-align: middle;
+}
+
+a {
+  color: #006b9c;
+}
+.red {
+  background-color: #ff4f49;
+}
+.redtext {
+  color: #ff4f49;
+}
+.blue {
+  background-color: #0099cd;
+}
+
+.orange {
+  background-color: #FFA500;
+}
+
+.bluetext {
+  color: #0099cd;
+}
+
+.box .italic {
+  font-style: italic;
+}
+.table-container {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.table-container#nat {
+  width: 70%;
+  margin-left: 15%;
+}
+
+th {
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 90%;
+}
+
+/*.sorting_asc {
+    color: #ff4f49;
+  }
+
+.sorting_desc {
+    color: #ff4f49;
+  }*/
+
+table.dataTable.display tbody tr.even>.sorting_1, table.dataTable.order-column.stripe tbody tr.even>.sorting_1 {
+/*background-color: #FFE5E5;*/
+background-color: #eee;
+}
+
+table.dataTable.display tbody tr.odd>.sorting_1, table.dataTable.order-column.stripe tbody tr.odd>.sorting_1 {
+/*background-color: #FFCCCB;*/
+background-color: #ddd;
+}
+
+td {
+  font-size: 85%;
+  text-align: center;
+}
+.paginate_button {
+  padding: 10px !important;
+}
+.btn {
+  background-color: #4C50AF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.btn:hover {
+  border: 2px solid #000;
+}
+.mapboxgl-popup-content {
+  min-width: 400px;
+  max-width: 400px;
+  width: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+.floater {
+  float: right;
+  padding: 5px;
+  margin-top: -10px;
+  vertical-align: middle;
+  font-size: 10pt;
+}
+
+#mi_half, #ny_half {
+  width: 70%;
+  display: inline-block;
+}
+
+@media screen and (min-width: 800px) {
+  #mi_half, #ny_half {
+    width: 35%;
+    display: inline-block;
+    padding: 10px;
+  }
+}
+
+#mi_map, #ny_map {
+  width: 100%;
+  display: block;
+  border: 1px solid #ccc;
+  height: 400px;
+  max-height: 50vh;
+}
+
+.dataTables_info {
+  display: none;
+}
+
+
+.dataTables_scrollBody::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 8px;
+}
+.dataTables_scrollBody::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.popupName {
+  font-family: "Lora", Georgia, serif; 
+  font-weight: "bold";
+  font-size: 2.2em;
+  text-align: left;
+  color: #000;
+  line-height: 1.2em;
+}
+
+.popupHeader {
+  border-bottom: 1px solid #ccc;
+}
+
+.popupHeader h1, .popupHeader p, .popupBody h1, .popupBody p {
+  margin-left: 10%;
+  width: 80%;
+}
+
+.popupHeader p, .popupBody p {
+  font-family: "Helvetica", sans-serif;
+  font-size: 1.25em;
+  color: #333;
+}
+
+.popupBody .fas {
+  font-size: 1.75em;
+  vertical-align: middle;
+}
+
+.popupBody .fa-users {
+  font-size: 1.35em;
+}
+
+.popupBody .fa-syringe, .popupBody .fa-cog {
+  font-size: 1.6em;
+}
+
+.popupBody .label {
+  margin-left: 10px;
+}
+
+.popupBody {
+  margin-bottom: 20px;
+}
+
+.popupBody p {
+  line-height: 1.6em;
+}
+
+
+/* see https://www.w3schools.com/howto/howto_css_circles.asp, lol */
+.dot {
+    height: 8px;
+    width: 8px;
+    margin-left: 6px;
+    margin-right: 6px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.greenDot {
+  height: 8px;
+  width: 8px;
+  margin-left: 6px;
+  margin-right: 6px;
+  background-color: #00A300;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.desc {
+  max-width: 900px;
+  margin: 20px auto;
+}
